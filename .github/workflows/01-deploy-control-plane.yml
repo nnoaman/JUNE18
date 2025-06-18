@@ -92,7 +92,7 @@ jobs:
           TF_VAR_tf_version: ${{ env.TF_VERSION }}
           TF_VAR_app_registration_app_id: ${{ secrets.APP_REGISTRATION_APP_ID }}
           APP_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
-          TF_VAR_APP_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
+          TF_VAR_github_app_token: ${{ steps.get_workflow_token.outputs.token }}
 
   populate-keyvault:
     name: Save Deployment Credentials in Azure Keyvault
