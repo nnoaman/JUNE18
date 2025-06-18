@@ -149,7 +149,7 @@ jobs:
           TF_VAR_ansible_core_version: ${{ env.ANSIBLE_CORE_VERSION }}
           TF_VAR_app_registration_app_id: ${{ secrets.APP_REGISTRATION_APP_ID }}
           TF_VAR_tf_version: ${{ env.TF_VERSION }}
-          TF_VAR_APP_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
+          TF_VAR_github_app_token: ${{ steps.get_workflow_token.outputs.token }}
           USE_MSI: ${{ env.USE_MSI }}
           ZONE: ${{ inputs.control_plane_name }}
 
@@ -217,7 +217,7 @@ jobs:
           TF_VAR_ansible_core_version: ${{ env.ANSIBLE_CORE_VERSION }}
           TF_VAR_app_registration_app_id: ${{ secrets.APP_REGISTRATION_APP_ID }}
           TF_VAR_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          TF_VAR_APP_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
+          TF_VAR_github_app_token: ${{ steps.get_workflow_token.outputs.token }}
           tf_version: ${{ env.TF_VERSION }}
           TF_VAR_use_spn: ${{ env.USE_MSI }}
           USE_MSI: ${{ env.USE_MSI }}
